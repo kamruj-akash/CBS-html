@@ -26,7 +26,7 @@
             }
         }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght=300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
@@ -42,7 +42,7 @@
             </div>
 
             <nav class="hidden md:flex space-x-8">
-                <a href="#home" class="text-darkText hover:text-primary font-medium transition duration-300">Home</a>
+                <a href="#banner-section" class="text-darkText hover:text-primary font-medium transition duration-300">Home</a>
                 <a href="#what-we-do" class="text-darkText hover:text-primary font-medium transition duration-300">What
                     We Do</a>
                 <a href="#why-choose-us"
@@ -71,7 +71,7 @@
 
         <div id="mobile-menu" class="md:hidden bg-white py-4 mt-2 border-t border-gray-200 hidden">
             <nav class="flex flex-col items-center space-y-4">
-                <a href="#home"
+                <a href="#banner-section"
                     class="text-darkText hover:text-primary font-medium transition duration-300 py-2">Home</a>
                 <a href="#what-we-do"
                     class="text-darkText hover:text-primary font-medium transition duration-300 py-2">What We Do</a>
@@ -88,26 +88,38 @@
     </header>
 
     <main>
-        <section id="home"
-            class="relative bg-gradient-to-br from-primary to-secondary text-white py-24 md:py-32 flex items-center justify-center min-h-screen-75 overflow-hidden">
-            <div class="container mx-auto px-6 text-center z-10">
-                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4 slide-in-left">
-                    Your Experience. Your Qualification. <br class="hidden md:inline"> Real Recognition.
-                </h1>
-                <p class="text-lg md:text-xl mb-8 fade-in" style="animation-delay: 0.3s;">
-                    Secure your career with **Career Bridge Solutions** — your trusted partner for Recognition of Prior
-                    Learning (RPL) in Australia.
-                </p>
-                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 fade-in"
-                    style="animation-delay: 0.6s;">
-                    <a href="#what-we-do"
-                        class="btn-secondary bg-white text-primary px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl hover:text-white hover:bg-primary transition duration-300 ease-in-out">
-                        Discover Our Services
-                    </a>
-                    <a href="#contact"
-                        class="btn-secondary border-2 border-white text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl hover:bg-white hover:text-primary transition duration-300 ease-in-out">
-                        Check Your Eligibility
-                    </a>
+        <section id="banner-section"
+            class="relative text-white py-24 md:py-0 flex items-center justify-center min-h-screen-75 overflow-hidden bg-cover bg-center"
+            style="background-image: url('img/placeholder-banner-bg.jpg');">
+            <div class="absolute inset-0 z-0"
+                style="background: linear-gradient(90deg, #181842, #00aeef); opacity: 0.8;"></div>
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-stretch justify-between z-10 h-full">
+                <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0 flex items-center">
+                    <div>
+                        <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4 slide-in-left">
+                            Your Experience. Your Qualification. <br class="hidden md:inline"> Real Recognition.
+                        </h1>
+                        <p class="text-lg md:text-xl mb-8 fade-in" style="animation-delay: 0.3s;">
+                            Secure your career with **Career Bridge Solutions** — your trusted partner for Recognition
+                            of Prior
+                            Learning (RPL) in Australia.
+                        </p>
+                        <div class="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4 fade-in"
+                            style="animation-delay: 0.6s;">
+                            <a href="#what-we-do"
+                                class="btn-secondary bg-white text-primary px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl hover:text-white hover:bg-primary transition duration-300 ease-in-out">
+                                Discover Our Services
+                            </a>
+                            <a href="#contact"
+                                class="btn-secondary border-2 border-white text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl hover:bg-white hover:text-primary transition duration-300 ease-in-out">
+                                Check Your Eligibility
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center md:justify-end slide-in-right h-full">
+                    <img src="img/banner-left.png"
+                        alt="Career Bridge Solutions Team" class="rounded-lg shadow-lg w-full h-full object-cover">
                 </div>
             </div>
             <div class="absolute inset-0 overflow-hidden">
@@ -312,7 +324,7 @@
             <div>
                 <h3 class="text-white text-xl font-bold mb-4">Quick Links</h3>
                 <ul class="space-y-2">
-                    <li><a href="#home" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                    <li><a href="#banner-section" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
                     <li><a href="#what-we-do" class="text-gray-400 hover:text-white transition duration-300">What We
                             Do</a></li>
                     <li><a href="#why-choose-us" class="text-gray-400 hover:text-white transition duration-300">Why
