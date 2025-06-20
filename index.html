@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Bridge Solutions - Your Trusted RPL Documentation Partner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Tailwind CSS configuration to extend default theme
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1A4F8B', // Darker blue from banner
+                        secondary: '#2672B1', // Lighter blue from banner
+                        darkText: '#333333',
+                        lightText: '#666666',
+                        // accent: '#F97316', // Removed as it doesn't match banner colors
+                        'primary-dark': '#154275', // Slightly darker primary for cards
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'], // Or any other modern sans-serif font
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body class="font-sans text-darkText bg-gray-50">
+
+    <header class="bg-white shadow-sm py-4 fixed w-full z-50 transition-all duration-300" id="main-header">
+        <div class="container mx-auto px-6 flex items-center justify-between">
+            <div class="flex-shrink-0">
+                <a href="index.html" class="flex items-center">
+                    <img src="img/logo.png" alt="Career Bridge Solutions Logo" class="h-10 md:h-12 w-auto">
+                </a>
+            </div>
+
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="text-darkText hover:text-primary font-medium transition duration-300">Home</a>
+                <a href="#what-we-do" class="text-darkText hover:text-primary font-medium transition duration-300">What
+                    We Do</a>
+                <a href="#why-choose-us"
+                    class="text-darkText hover:text-primary font-medium transition duration-300">Why Choose Us</a>
+                <a href="#contact" class="text-darkText hover:text-primary font-medium transition duration-300">Contact
+                    Us</a>
+            </nav>
+
+            <div class="hidden md:block">
+                <a href="#contact"
+                    class="btn-primary bg-primary text-white px-6 py-2 rounded-full font-semibold shadow-lg hover:shadow-xl">
+                    Get Free Consultation
+                </a>
+            </div>
+
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-darkText focus:outline-none">
+                    <div class="w-8 h-8 flex flex-col justify-around">
+                        <span class="block h-1 w-full bg-darkText rounded-full"></span>
+                        <span class="block h-1 w-full bg-darkText rounded-full"></span>
+                        <span class="block h-1 w-full bg-darkText rounded-full"></span>
+                    </div>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="md:hidden bg-white py-4 mt-2 border-t border-gray-200 hidden">
+            <nav class="flex flex-col items-center space-y-4">
+                <a href="#home"
+                    class="text-darkText hover:text-primary font-medium transition duration-300 py-2">Home</a>
+                <a href="#what-we-do"
+                    class="text-darkText hover:text-primary font-medium transition duration-300 py-2">What We Do</a>
+                <a href="#why-choose-us"
+                    class="text-darkText hover:text-primary font-medium transition duration-300 py-2">Why Choose Us</a>
+                <a href="#contact"
+                    class="text-darkText hover:text-primary font-medium transition duration-300 py-2">Contact Us</a>
+                <a href="#contact"
+                    class="btn-primary bg-primary text-white px-6 py-2 rounded-full font-semibold shadow-lg hover:shadow-xl w-max">
+                    Get Free Consultation
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home"
+            class="relative bg-gradient-to-br from-primary to-secondary text-white py-24 md:py-32 flex items-center justify-center min-h-screen-75 overflow-hidden">
+            <div class="container mx-auto px-6 text-center z-10">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4 slide-in-left">
+                    Your Experience. Your Qualification. <br class="hidden md:inline"> Real Recognition.
+                </h1>
+                <p class="text-lg md:text-xl mb-8 fade-in" style="animation-delay: 0.3s;">
+                    Secure your career with **Career Bridge Solutions** — your trusted partner for Recognition of Prior
+                    Learning (RPL) in Australia.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 fade-in"
+                    style="animation-delay: 0.6s;">
+                    <a href="#what-we-do"
+                        class="btn-secondary bg-white text-primary px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl hover:text-white hover:bg-primary transition duration-300 ease-in-out">
+                        Discover Our Services
+                    </a>
+                    <a href="#contact"
+                        class="btn-secondary border-2 border-white text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl hover:bg-white hover:text-primary transition duration-300 ease-in-out">
+                        Check Your Eligibility
+                    </a>
+                </div>
+            </div>
+            <div class="absolute inset-0 overflow-hidden">
+                <div
+                    class="absolute top-0 left-0 w-64 h-64 bg-white opacity-10 rounded-full mix-blend-overlay animate-pulse-slow">
+                </div>
+                <div
+                    class="absolute bottom-0 right-0 w-80 h-80 bg-white opacity-10 rounded-full mix-blend-overlay animate-pulse-slow-delay">
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-24 bg-gray-50" id="intro-section">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-darkText mb-8 scale-in">
+                    Welcome to **Career Bridge Solutions**
+                </h2>
+                <p class="text-lg md:text-xl text-lightText leading-relaxed max-w-3xl mx-auto mb-8 fade-in">
+                    In today’s fast-changing job market, having the right qualification is more important than ever. But
+                    what if you already have years of hands-on experience, yet no formal certificate to show for it?
+                    That’s where **Career Bridge Solutions** comes in.
+                </p>
+                <p class="text-lg md:text-xl text-lightText leading-relaxed max-w-3xl mx-auto fade-in">
+                    We specialize in helping skilled individuals across Australia get their experience formally
+                    recognized through Recognition of Prior Learning (RPL) — without fake promises, without shortcuts.
+                </p>
+                <p class="text-lg md:text-xl text-lightText leading-relaxed max-w-3xl mx-auto mt-6 fade-in">
+                    Thousands of students are now at risk as dodgy RTOs shut down across the country. If you’re unsure
+                    about the status of your qualification or worried it might get cancelled, **Career Bridge
+                    Solutions** offers a safe, reliable, and compliant path forward.
+                </p>
+            </div>
+        </section>
+
+        <section id="what-we-do" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-darkText mb-12 scale-in">
+                    What We Do
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 fade-in-delay"
+                        style="animation-delay: 0.2s;">
+                        <div class="text-primary mb-4 text-6xl">📄</div>
+                        <h3 class="text-2xl font-semibold text-darkText mb-4">Document Assessment</h3>
+                        <p class="text-lightText">
+                            We review your experience and paperwork to check if you’re eligible for RPL — 100%
+                            obligation-free. Get clarity on your path forward.
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 fade-in-delay"
+                        style="animation-delay: 0.4s;">
+                        <div class="text-primary mb-4 text-6xl">⚠️</div>
+                        <h3 class="text-2xl font-semibold text-darkText mb-4">Risk Alerts & Safeguarding</h3>
+                        <p class="text-lightText">
+                            If you already have a certificate, we’ll check if it’s at risk of cancellation and help you
+                            secure it before it’s too late.
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 fade-in-delay"
+                        style="animation-delay: 0.6s;">
+                        <div class="text-primary mb-4 text-6xl">🤝</div>
+                        <h3 class="text-2xl font-semibold text-darkText mb-4">Genuine Guidance</h3>
+                        <p class="text-lightText">
+                            No agents, no misleading claims — just expert advice and support every step of the way from
+                            compliance specialists.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="why-choose-us" class="py-16 md:py-24 bg-primary text-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12 scale-in">
+                    Why Choose Career Bridge Solutions?
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-primary-dark p-6 rounded-lg shadow-md flex flex-col items-center justify-center text-center fade-in-delay"
+                        style="animation-delay: 0.2s;">
+                        <div class="text-white mb-4 text-5xl">✨</div>
+                        <h3 class="text-xl font-semibold mb-2">Backed by Experts</h3>
+                        <p class="text-gray-200">
+                            Compliance experts with deep knowledge of Australian RTO frameworks.
+                        </p>
+                    </div>
+                    <div class="bg-primary-dark p-6 rounded-lg shadow-md flex flex-col items-center justify-center text-center fade-in-delay"
+                        style="animation-delay: 0.4s;">
+                        <div class="text-white mb-4 text-5xl">🔍</div>
+                        <h3 class="text-xl font-semibold mb-2">Transparent Process</h3>
+                        <p class="text-gray-200">
+                            You’ll always know where you stand, with clear and honest communication.
+                        </p>
+                    </div>
+                    <div class="bg-primary-dark p-6 rounded-lg shadow-md flex flex-col items-center justify-center text-center fade-in-delay"
+                        style="animation-delay: 0.6s;">
+                        <div class="text-white mb-4 text-5xl">✅</div>
+                        <h3 class="text-xl font-semibold mb-2">Trusted Nationwide</h3>
+                        <p class="text-gray-200">
+                            Trusted by students, tradies, aged care workers, and migrants nationwide.
+                        </p>
+                    </div>
+                    <div class="bg-primary-dark p-6 rounded-lg shadow-md flex flex-col items-center justify-center text-center fade-in-delay"
+                        style="animation-delay: 0.8s;">
+                        <div class="text-white mb-4 text-5xl">🛡️</div>
+                        <h3 class="text-xl font-semibold mb-2">Real Protection</h3>
+                        <p class="text-gray-200">
+                            Real people. Real experience. Real protection for your career.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-secondary text-white text-center">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 slide-in-left">
+                    Don't Wait Until Your Qualification Gets Cancelled.
+                </h2>
+                <p class="text-lg md:text-xl mb-8 fade-in">
+                    Let us help you check your status and move forward — safely.
+                </p>
+                <a href="#contact"
+                    class="btn-primary bg-primary text-white px-10 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out">
+                    Secure Your Qualification Now!
+                </a>
+            </div>
+        </section>
+
+        <section id="contact" class="py-16 md:py-24 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-darkText text-center mb-12 scale-in">
+                    Get in Touch with Career Bridge Solutions
+                </h2>
+                <div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-lg fade-in">
+                    <form action="#" method="POST" class="space-y-6" id="contact-form">
+                        <div>
+                            <label for="name" class="block text-lg font-medium text-darkText mb-2">Your Name</label>
+                            <input type="text" id="name" name="name"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                                placeholder="John Doe" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-lg font-medium text-darkText mb-2">Your Email</label>
+                            <input type="email" id="email" name="email"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                                placeholder="john.doe@example.com" required>
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-lg font-medium text-darkText mb-2">Phone Number
+                                (Optional)</label>
+                            <input type="tel" id="phone" name="phone"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                                placeholder="+61 4XX XXX XXX">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-lg font-medium text-darkText mb-2">How can we help
+                                you?</label>
+                            <textarea id="message" name="message" rows="5"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                                placeholder="I need help with RPL for my construction experience..."
+                                required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit"
+                                class="btn-primary bg-primary text-white px-10 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out">
+                                Send Your Inquiry
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="text-center mt-12 fade-in">
+                    <p class="text-lightText text-lg">
+                        **Career Bridge Solutions is not an RTO or a broker.** We act as your independent support
+                        system, helping you avoid scams, secure valid documentation, and plan your career with
+                        confidence.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-darkText py-12 text-gray-300">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-white text-xl font-bold mb-4">About Career Bridge Solutions</h3>
+                <p class="text-gray-400">
+                    Your independent support system for Recognition of Prior Learning (RPL) in Australia. We provide
+                    genuine guidance and real protection for your career.
+                </p>
+                <div class="flex space-x-4 mt-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <span class="text-2xl">📘</span>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <span class="text-2xl">🔗</span>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-white text-xl font-bold mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="#home" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                    <li><a href="#what-we-do" class="text-gray-400 hover:text-white transition duration-300">What We
+                            Do</a></li>
+                    <li><a href="#why-choose-us" class="text-gray-400 hover:text-white transition duration-300">Why
+                            Choose Us</a></li>
+                    <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Contact Us</a>
+                    </li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-white text-xl font-bold mb-4">Contact Info</h3>
+                <p class="text-gray-400 mb-2">
+                    Email: <a href="mailto:info@careerbridgesolutions.com.au"
+                        class="hover:text-white">info@careerbridgesolutions.com.au</a>
+                </p>
+                <p class="text-gray-400">
+                    Phone: <a href="tel:+61412345678" class="hover:text-white">+61 4XX XXX XXX</a> (Placeholder)
+                </p>
+                <p class="text-gray-400 mt-4">
+                    Address: [Your Address Here], Australia (Placeholder)
+                </p>
+            </div>
+        </div>
+        <div class="text-center border-t border-gray-700 pt-8 mt-8">
+            <p class="text-gray-500 text-sm">&copy; 2025 Career Bridge Solutions. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

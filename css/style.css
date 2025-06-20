@@ -1,0 +1,135 @@
+/* Custom CSS for smoother transitions and basic animations */
+body {
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll due to animations */
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scale-in {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.scale-in.appear {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.slide-in-left.appear {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.slide-in-right.appear {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* For delayed animations */
+.fade-in-delay {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-delay.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hover effects for buttons - common style */
+.btn-primary {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: #154275;
+    /* Darker shade of new primary */
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #1F5C8E;
+    /* Darker shade of new secondary */
+    transform: translateY(-2px);
+    color: #ffffff;
+}
+
+/* Custom Keyframe Animations for Hero Section background */
+@keyframes pulse-slow {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.1;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 0.15;
+    }
+
+    100% {
+        transform: scale(0.8);
+        opacity: 0.1;
+    }
+}
+
+@keyframes pulse-slow-delay {
+    0% {
+        transform: scale(0.9);
+        opacity: 0.1;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 0.15;
+    }
+
+    100% {
+        transform: scale(0.9);
+        opacity: 0.1;
+    }
+}
+
+.animate-pulse-slow {
+    animation: pulse-slow 8s infinite ease-in-out;
+}
+
+.animate-pulse-slow-delay {
+    animation: pulse-slow-delay 10s infinite ease-in-out 2s;
+    /* 2s delay */
+}
+
+/* Adjust hero section min-height for better visual */
+@media (min-width: 768px) {
+    .min-h-screen-75 {
+        min-height: 75vh;
+    }
+}
