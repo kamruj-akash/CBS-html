@@ -83,6 +83,29 @@ body {
     color: #ffffff;
 }
 
+
+/* For manual carousel, ensure slides are flex items and container has overflow hidden */
+#testimonial-carousel {
+    display: flex;
+    transition: transform 0.7s ease-in-out;
+}
+
+#testimonial-carousel>div {
+    flex: 0 0 100%;
+    /* Each slide takes full width */
+}
+
+/* For testimonial dots */
+.current-testimonial {
+    background-color: #1A4F8B;
+    /* primary color */
+}
+
+/* Add to your existing CSS */
+.faq-item .faq-question svg.rotate-180 {
+    transform: rotate(180deg);
+}
+
 /* Custom Keyframe Animations for Hero Section background */
 @keyframes pulse-slow {
     0% {
