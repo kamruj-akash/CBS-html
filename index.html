@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Career Bridge Solutions - Your Trusted RPL Documentation Partner</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         // Tailwind CSS configuration to extend default theme
@@ -16,18 +17,22 @@
                         secondary: '#2672B1', // Lighter blue from banner
                         darkText: '#333333',
                         lightText: '#666666',
-                        // accent: '#F97316', // Removed as it doesn't match banner colors
                         'primary-dark': '#154275', // Slightly darker primary for cards
                     },
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'], // Or any other modern sans-serif font
+                        sans: ['Inter', 'sans-serif'], // Inter font for modern look
                     }
                 }
             }
         }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght=300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for WhatsApp Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- jQuery CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
@@ -41,23 +46,31 @@
                 </a>
             </div>
 
+            <!-- Desktop Navigation -->
             <nav class="hidden md:flex space-x-8">
-                <a href="#banner-section" class="text-darkText hover:text-primary font-medium transition duration-300">Home</a>
+                <a href="#banner-section"
+                    class="text-darkText hover:text-primary font-medium transition duration-300">Home</a>
                 <a href="#what-we-do" class="text-darkText hover:text-primary font-medium transition duration-300">What
                     We Do</a>
+                <a href="#eligibility-quiz"
+                    class="text-darkText hover:text-primary font-medium transition duration-300">Check Eligibility</a>
                 <a href="#why-choose-us"
                     class="text-darkText hover:text-primary font-medium transition duration-300">Why Choose Us</a>
-                <a href="#contact" class="text-darkText hover:text-primary font-medium transition duration-300">Contact
-                    Us</a>
+                <a href="article.html"
+                    class="text-darkText hover:text-primary font-medium transition duration-300">Blog</a>
+                <a href="contact.html"
+                    class="text-darkText hover:text-primary font-medium transition duration-300">Contact Us</a>
             </nav>
 
+            <!-- Desktop Call to Action Button -->
             <div class="hidden md:block">
-                <a href="#contact"
+                <a href="contact.html"
                     class="btn-primary bg-primary text-white px-6 py-2 rounded-full font-semibold shadow-lg hover:shadow-xl">
                     Get Free Consultation
                 </a>
             </div>
 
+            <!-- Mobile Menu Button -->
             <div class="md:hidden">
                 <button id="mobile-menu-button" class="text-darkText focus:outline-none">
                     <div class="w-8 h-8 flex flex-col justify-around">
@@ -69,17 +82,23 @@
             </div>
         </div>
 
+        <!-- Mobile Menu -->
         <div id="mobile-menu" class="md:hidden bg-white py-4 mt-2 border-t border-gray-200 hidden">
             <nav class="flex flex-col items-center space-y-4">
                 <a href="#banner-section"
                     class="text-darkText hover:text-primary font-medium transition duration-300 py-2">Home</a>
                 <a href="#what-we-do"
                     class="text-darkText hover:text-primary font-medium transition duration-300 py-2">What We Do</a>
+                <a href="#eligibility-quiz"
+                    class="text-darkText hover:text-primary font-medium transition duration-300 py-2">Check
+                    Eligibility</a>
                 <a href="#why-choose-us"
                     class="text-darkText hover:text-primary font-medium transition duration-300 py-2">Why Choose Us</a>
-                <a href="#contact"
+                <a href="article.html"
+                    class="text-darkText hover:text-primary font-medium transition duration-300 py-2">Blog</a>
+                <a href="contact.html"
                     class="text-darkText hover:text-primary font-medium transition duration-300 py-2">Contact Us</a>
-                <a href="#contact"
+                <a href="contact.html"
                     class="btn-primary bg-primary text-white px-6 py-2 rounded-full font-semibold shadow-lg hover:shadow-xl w-max">
                     Get Free Consultation
                 </a>
@@ -88,6 +107,7 @@
     </header>
 
     <main>
+        <!-- Hero/Banner Section -->
         <section id="banner-section"
             class="relative text-white py-24 md:py-0 flex items-center justify-center min-h-screen-75 overflow-hidden bg-cover bg-center"
             style="background-image: url('img/placeholder-banner-bg.jpg');">
@@ -110,7 +130,7 @@
                                 class="btn-secondary bg-white text-primary px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl hover:text-white hover:bg-primary transition duration-300 ease-in-out">
                                 Discover Our Services
                             </a>
-                            <a href="#contact"
+                            <a href="contact.html"
                                 class="btn-secondary border-2 border-white text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl hover:bg-white hover:text-primary transition duration-300 ease-in-out">
                                 Check Your Eligibility
                             </a>
@@ -118,8 +138,8 @@
                     </div>
                 </div>
                 <div class="md:w-1/2 flex justify-center md:justify-end slide-in-right h-full">
-                    <img src="img/banner-left.png"
-                        alt="Career Bridge Solutions Team" class="rounded-lg shadow-lg w-full h-full object-cover">
+                    <img src="img/banner-left.png" alt="Career Bridge Solutions Team"
+                        class="rounded-lg shadow-lg w-full h-full object-cover">
                 </div>
             </div>
             <div class="absolute inset-0 overflow-hidden">
@@ -132,6 +152,7 @@
             </div>
         </section>
 
+        <!-- Introduction Section -->
         <section class="py-16 md:py-24 bg-gray-50" id="intro-section">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold text-darkText mb-8 scale-in">
@@ -154,6 +175,7 @@
             </div>
         </section>
 
+        <!-- What We Do Section -->
         <section id="what-we-do" class="py-16 md:py-24 bg-white">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold text-darkText mb-12 scale-in">
@@ -193,6 +215,106 @@
             </div>
         </section>
 
+        <!-- New: Service Specific Section (Example: RPL for Carpenters) -->
+        <section id="rpl-carpentry" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-darkText text-center mb-12 scale-in">
+                    RPL for Carpenters
+                </h2>
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="md:w-1/2 fade-in-left">
+                        <img src="https://placehold.co/600x400/1A4F8B/FFFFFF?text=RPL+Carpentry"
+                            alt="RPL for Carpenters" class="rounded-lg shadow-md w-full h-auto">
+                    </div>
+                    <div class="md:w-1/2 fade-in-right">
+                        <p class="text-lg text-lightText mb-4">
+                            If you're an experienced carpenter without a formal qualification, our RPL process can help
+                            you
+                            convert your practical skills into a nationally recognized certification.
+                        </p>
+                        <ul class="list-disc list-inside text-lightText mb-6 ml-5">
+                            <li>Recognize your on-the-job experience.</li>
+                            <li>Boost your career prospects.</li>
+                            <li>Meet industry requirements.</li>
+                        </ul>
+                        <a href="contact.html"
+                            class="btn-primary bg-primary text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl">
+                            Get My Carpentry RPL
+                        </a>
+                    </div>
+                </div>
+                <!-- You can add more similar sections for other services (e.g., Aged Care, IT) -->
+            </div>
+        </section>
+
+        <!-- New: Interactive Eligibility Quiz Section -->
+        <section id="eligibility-quiz" class="py-16 md:py-24 bg-secondary text-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8 scale-in">
+                    Check Your RPL Eligibility Instantly!
+                </h2>
+                <p class="text-lg md:text-xl mb-10 fade-in">
+                    Answer a few quick questions to see if you qualify for RPL.
+                </p>
+
+                <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg text-darkText fade-in-delay">
+                    <form id="eligibility-form" class="space-y-6">
+                        <div>
+                            <label for="experience-years"
+                                class="block text-left text-lg font-medium text-darkText mb-2">How many years of
+                                relevant work experience do you have?</label>
+                            <select id="experience-years" name="experience-years"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+                                <option value="">Select years</option>
+                                <option value="1-3">1-3 years</option>
+                                <option value="3-5">3-5 years</option>
+                                <option value="5+">5+ years</option>
+                            </select>
+                            <p id="experience-years-error" class="text-red-500 text-sm mt-1 hidden">Please select your
+                                years of experience.</p>
+                        </div>
+                        <div>
+                            <label for="qualification-type"
+                                class="block text-left text-lg font-medium text-darkText mb-2">What type of
+                                qualification are you seeking?</label>
+                            <input type="text" id="qualification-type" name="qualification-type"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                                placeholder="e.g., Certificate III in Carpentry" required>
+                            <p id="qualification-type-error" class="text-red-500 text-sm mt-1 hidden">Please enter the
+                                qualification type.</p>
+                        </div>
+                        <div>
+                            <label for="current-status"
+                                class="block text-left text-lg font-medium text-darkText mb-2">Do you currently hold any
+                                Australian qualifications?</label>
+                            <div class="flex items-center space-x-4 mt-2">
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="current-status" value="yes"
+                                        class="form-radio text-primary" required>
+                                    <span class="ml-2">Yes</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="current-status" value="no"
+                                        class="form-radio text-primary">
+                                    <span class="ml-2">No</span>
+                                </label>
+                            </div>
+                            <p id="current-status-error" class="text-red-500 text-sm mt-1 hidden">Please select an
+                                option.</p>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit"
+                                class="btn-primary bg-primary text-white px-10 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out">
+                                Check My Eligibility
+                            </button>
+                        </div>
+                        <div id="eligibility-results" class="mt-6 text-center font-semibold text-lg hidden"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
         <section id="why-choose-us" class="py-16 md:py-24 bg-primary text-white">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold mb-12 scale-in">
@@ -235,6 +357,7 @@
             </div>
         </section>
 
+        <!-- Testimonials Section -->
         <section id="testimonials" class="py-16 md:py-24 bg-gray-50">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold text-darkText mb-12 scale-in">
@@ -286,6 +409,7 @@
             </div>
         </section>
 
+        <!-- Call to Action Before FAQ -->
         <section class="py-16 bg-secondary text-white text-center">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl md:text-4xl font-bold mb-6 slide-in-left">
@@ -294,13 +418,86 @@
                 <p class="text-lg md:text-xl mb-8 fade-in">
                     Let us help you check your status and move forward — safely.
                 </p>
-                <a href="#contact"
+                <a href="contact.html"
                     class="btn-primary bg-primary text-white px-10 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out">
                     Secure Your Qualification Now!
                 </a>
             </div>
         </section>
 
+        <!-- New: Blog/News Section -->
+        <section id="blog" class="py-16 md:py-24 bg-gray-50">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-darkText mb-12 scale-in">
+                    Latest Insights & News
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Blog Post 1 -->
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 fade-in-delay">
+                        <img src="https://placehold.co/400x250/2672B1/FFFFFF?text=RPL+Process"
+                            alt="Blog Post Image: Understanding the RPL Process"
+                            class="rounded-t-lg mb-4 object-cover h-48 w-full">
+                        <h3 class="text-xl font-semibold text-darkText mb-2">
+                            <a href="#" class="hover:text-primary transition duration-300">
+                                Understanding the RPL Process in Australia
+                            </a>
+                        </h3>
+                        <p class="text-lightText text-sm mb-4">
+                            Learn about the steps involved in getting your prior learning recognized and why it matters
+                            for your career...
+                        </p>
+                        <a href="article-detail.html?id=rpl-process"
+                            class="text-primary font-medium hover:underline">Read More &rarr;</a>
+                    </div>
+
+                    <!-- Blog Post 2 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 fade-in-delay"
+                        style="animation-delay: 0.2s;">
+                        <img src="https://placehold.co/400x250/1A4F8B/FFFFFF?text=Qualification+Risk"
+                            alt="Blog Post Image: Qualification Risk"
+                            class="rounded-t-lg mb-4 object-cover h-48 w-full">
+                        <h3 class="text-xl font-semibold text-darkText mb-2">
+                            <a href="#" class="hover:text-primary transition duration-300">
+                                Is Your Qualification at Risk? What You Need to Know
+                            </a>
+                        </h3>
+                        <p class="text-lightText text-sm mb-4">
+                            Recent changes in RTO regulations could impact your existing certificate. Find out how to
+                            protect it...
+                        </p>
+                        <a href="article-detail.html?id=qualification-risk"
+                            class="text-primary font-medium hover:underline">Read More &rarr;</a>
+                    </div>
+
+                    <!-- Blog Post 3 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 fade-in-delay"
+                        style="animation-delay: 0.4s;">
+                        <img src="https://placehold.co/400x250/2672B1/FFFFFF?text=Success+Story"
+                            alt="Blog Post Image: Success Story" class="rounded-t-lg mb-4 object-cover h-48 w-full">
+                        <h3 class="text-xl font-semibold text-darkText mb-2">
+                            <a href="#" class="hover:text-primary transition duration-300">
+                                Success Story: From Tradesman to Certified Professional
+                            </a>
+                        </h3>
+                        <p class="text-lightText text-sm mb-4">
+                            Hear how John D. secured his future with RPL through Career Bridge Solutions and transformed
+                            his career...
+                        </p>
+                        <a href="article-detail.html?id=john-success-story"
+                            class="text-primary font-medium hover:underline">Read More &rarr;</a>
+                    </div>
+                </div>
+                <div class="mt-12">
+                    <a href="article.html"
+                        class="btn-secondary bg-primary text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out">
+                        View All Articles
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
         <section id="faq" class="py-16 md:py-24 bg-white">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl md:text-4xl font-bold text-darkText text-center mb-12 scale-in">
@@ -370,65 +567,9 @@
             </div>
         </section>
 
-        <section id="contact" class="py-16 md:py-24 bg-gray-100">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-darkText text-center mb-12 scale-in">
-                    Get in Touch with Career Bridge Solutions
-                </h2>
-                <div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-lg fade-in">
-                    <form action="https://formsubmit.co/your-email@example.com" method="POST" class="space-y-6"
-                        id="contact-form">
-                        <div>
-                            <label for="name" class="block text-lg font-medium text-darkText mb-2">Your Name</label>
-                            <input type="text" id="name" name="name"
-                                class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                                placeholder="John Doe" required>
-                        </div>
-                        <div>
-                            <label for="email" class="block text-lg font-medium text-darkText mb-2">Your Email</label>
-                            <input type="email" id="email" name="email"
-                                class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                                placeholder="john.doe@example.com" required>
-                        </div>
-                        <div>
-                            <label for="phone" class="block text-lg font-medium text-darkText mb-2">Phone Number
-                                (Optional)</label>
-                            <input type="tel" id="phone" name="phone"
-                                class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                                placeholder="+61 4XX XXX XXX">
-                        </div>
-                        <div>
-                            <label for="message" class="block text-lg font-medium text-darkText mb-2">How can we help
-                                you?</label>
-                            <textarea id="message" name="message" rows="5"
-                                class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                                placeholder="I need help with RPL for my construction experience..."
-                                required></textarea>
-                        </div>
-                        <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
-                        <input type="hidden" name="_autoresponse" value="Thank you for your inquiry!">
-                        <div class="text-center">
-                            <button type="submit"
-                                class="btn-primary bg-primary text-white px-10 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out">
-                                Send Your Inquiry
-                            </button>
-                        </div>
-                    </form>
-                </div>
-                <div class="text-center mt-12 fade-in">
-                    <p class="text-lightText text-lg">
-                        **Career Bridge Solutions is not an RTO or a broker.** We act as your independent support
-                        system, helping you avoid scams, secure valid documentation, and plan your career with
-                        confidence.
-                    </p>
-                </div>
-            </div>
-        </section>
-        
     </main>
 
-   
-
+    <!-- Footer Section -->
     <footer class="bg-darkText py-12 text-gray-300">
         <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
@@ -438,6 +579,7 @@
                     genuine guidance and real protection for your career.
                 </p>
                 <div class="flex space-x-4 mt-6">
+                    <!-- Placeholder social media icons/links. Replace # with actual links. -->
                     <a href="#" class="text-gray-400 hover:text-white transition duration-300">
                         <span class="text-2xl">📘</span>
                     </a>
@@ -450,13 +592,18 @@
             <div>
                 <h3 class="text-white text-xl font-bold mb-4">Quick Links</h3>
                 <ul class="space-y-2">
-                    <li><a href="#banner-section" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                    <li><a href="#banner-section"
+                            class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
                     <li><a href="#what-we-do" class="text-gray-400 hover:text-white transition duration-300">What We
                             Do</a></li>
+                    <li><a href="#eligibility-quiz" class="text-gray-400 hover:text-white transition duration-300">Check
+                            Eligibility</a></li>
                     <li><a href="#why-choose-us" class="text-gray-400 hover:text-white transition duration-300">Why
                             Choose Us</a></li>
-                    <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Contact Us</a>
+                    <li><a href="article.html" class="text-gray-400 hover:text-white transition duration-300">Blog</a>
                     </li>
+                    <li><a href="contact.html" class="text-gray-400 hover:text-white transition duration-300">Contact
+                            Us</a></li>
                     <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a>
                     </li>
                 </ul>
@@ -468,11 +615,15 @@
                     Email: <a href="mailto:info@careerbridgesolutions.com.au"
                         class="hover:text-white">info@careerbridgesolutions.com.au</a>
                 </p>
-                <p class="text-gray-400">
-                    Phone: <a href="tel:+61412345678" class="hover:text-white">+61 4XX XXX XXX</a> (Placeholder)
+                <p class="text-gray-400 mb-2 flex items-center">
+                    Phone: <a href="tel:+61470578967" class="hover:text-white">+61 470 578 967</a>
+                    <a href="https://wa.me/61470578967" target="_blank"
+                        class="ml-2 text-green-500 hover:text-green-400 transition duration-300">
+                        <i class="fab fa-whatsapp text-2xl"></i>
+                    </a>
                 </p>
                 <p class="text-gray-400 mt-4">
-                    Address: [Your Address Here], Australia (Placeholder)
+                    Address: 328 Swanston St, Melbourne VIC 3000, Australia
                 </p>
             </div>
         </div>
@@ -481,6 +632,7 @@
         </div>
     </footer>
 
+    <!-- Back to Top Button -->
     <button id="back-to-top"
         class="fixed bottom-6 right-6 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-primary-dark transition-all duration-300 transform hover:scale-110 z-50 opacity-0 invisible">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -488,9 +640,9 @@
         </svg>
     </button>
 
+    <!-- Custom JavaScript -->
     <script src="js/script.js"></script>
 
-    
 </body>
 
 </html>

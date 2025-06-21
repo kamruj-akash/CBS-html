@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Career Bridge Solutions</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Tailwind CSS configuration to extend default theme (same as index.html)
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1A4F8B', // Darker blue from banner
+                        secondary: '#2672B1', // Lighter blue from banner
+                        darkText: '#333333',
+                        lightText: '#666666',
+                        'primary-dark': '#154275', // Slightly darker primary for cards
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'], // Inter font for modern look
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for WhatsApp Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom CSS (same as style.css for consistent animations and button styles) -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body class="font-sans text-darkText bg-gray-50">
+
+    <!-- Header Section (Copied from index.html for consistency) -->
+    <header class="bg-white shadow-sm py-4 fixed w-full z-50 transition-all duration-300" id="main-header">
+        <div class="container mx-auto px-6 flex items-center justify-between">
+            <div class="flex-shrink-0">
+                <a href="index.html" class="flex items-center">
+                    <img src="img/logo.png" alt="Career Bridge Solutions Logo" class="h-10 md:h-12 w-auto">
+                </a>
+            </div>
+
+            <!-- Desktop Navigation (Adjusted links to go back to index.html sections) -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html#banner-section"
+                    class="text-darkText hover:text-primary font-medium transition duration-300">Home</a>
+                <a href="index.html#what-we-do"
+                    class="text-darkText hover:text-primary font-medium transition duration-300">What We Do</a>
+                <a href="index.html#eligibility-quiz"
+                    class="text-darkText hover:text-primary font-medium transition duration-300">Check Eligibility</a>
+                <a href="index.html#why-choose-us"
+                    class="text-darkText hover:text-primary font-medium transition duration-300">Why Choose Us</a>
+                <a href="article.html"
+                    class="text-darkText hover:text-primary font-medium transition duration-300">Blog</a>
+                <a href="#top" class="text-primary font-medium transition duration-300">Contact Us</a>
+                <!-- Current page link -->
+            </nav>
+
+            <!-- Desktop Call to Action Button -->
+            <div class="hidden md:block">
+                <a href="#top"
+                    class="btn-primary bg-primary text-white px-6 py-2 rounded-full font-semibold shadow-lg hover:shadow-xl">
+                    Get Free Consultation
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-darkText focus:outline-none">
+                    <div class="w-8 h-8 flex flex-col justify-around">
+                        <span class="block h-1 w-full bg-darkText rounded-full"></span>
+                        <span class="block h-1 w-full bg-darkText rounded-full"></span>
+                        <span class="block h-1 w-full bg-darkText rounded-full"></span>
+                    </div>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden bg-white py-4 mt-2 border-t border-gray-200 hidden">
+            <nav class="flex flex-col items-center space-y-4">
+                <a href="index.html#banner-section"
+                    class="text-darkText hover:text-primary font-medium transition duration-300 py-2">Home</a>
+                <a href="index.html#what-we-do"
+                    class="text-darkText hover:text-primary font-medium transition duration-300 py-2">What We Do</a>
+                <a href="index.html#eligibility-quiz"
+                    class="text-darkText hover:text-primary font-medium transition duration-300 py-2">Check
+                    Eligibility</a>
+                <a href="index.html#why-choose-us"
+                    class="text-darkText hover:text-primary font-medium transition duration-300 py-2">Why Choose Us</a>
+                <a href="article.html"
+                    class="text-darkText hover:text-primary font-medium transition duration-300 py-2">Blog</a>
+                <a href="#top" class="text-primary font-medium transition duration-300 py-2">Contact Us</a>
+                <!-- Current page link -->
+                <a href="#top"
+                    class="btn-primary bg-primary text-white px-6 py-2 rounded-full font-semibold shadow-lg hover:shadow-xl w-max">
+                    Get Free Consultation
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="top" class="pt-24 md:pt-32">
+        <!-- Added pt for header spacing -->
+        <section class="py-12 md:py-16 bg-primary text-white text-center">
+            <div class="container mx-auto px-6">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 scale-in">Get in Touch with Career Bridge Solutions</h1>
+                <p class="text-lg md:text-xl fade-in" style="animation-delay: 0.3s;">We are here to help you bridge your
+                    career aspirations with real recognition.</p>
+            </div>
+        </section>
+
+        <!-- Contact Section Content (Moved from index.html) -->
+        <section id="contact-content" class="py-16 md:py-24 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-lg fade-in">
+                    <!-- FormSubmit.co is used here as a placeholder. Replace 'your-email@example.com' with your actual email. -->
+                    <form action="https://formsubmit.co/info@careerbridgesolutions.com.au" method="POST"
+                        class="space-y-6" id="contact-form">
+                        <div>
+                            <label for="name" class="block text-lg font-medium text-darkText mb-2">Your Name</label>
+                            <input type="text" id="name" name="name"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                                placeholder="John Doe" required>
+                            <p id="name-error" class="text-red-500 text-sm mt-1 hidden">Name cannot be empty.</p>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-lg font-medium text-darkText mb-2">Your Email</label>
+                            <input type="email" id="email" name="email"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                                placeholder="john.doe@example.com" required>
+                            <p id="email-error" class="text-red-500 text-sm mt-1 hidden">Please enter a valid email
+                                address.</p>
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-lg font-medium text-darkText mb-2">Phone Number
+                                (Optional)</label>
+                            <input type="tel" id="phone" name="phone"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                                placeholder="+61 4XX XXX XXX">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-lg font-medium text-darkText mb-2">How can we help
+                                you?</label>
+                            <textarea id="message" name="message" rows="5"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                                placeholder="I need help with RPL for my construction experience..."
+                                required></textarea>
+                            <p id="message-error" class="text-red-500 text-sm mt-1 hidden">Message must be at least 10
+                                characters long.</p>
+                        </div>
+                        <!-- FormSubmit.co hidden fields for redirection and autoresponse -->
+                        <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
+                        <input type="hidden" name="_autoresponse" value="Thank you for your inquiry!">
+                        <div class="text-center">
+                            <button type="submit"
+                                class="btn-primary bg-primary text-white px-10 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out">
+                                Send Your Inquiry
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="text-center mt-12 fade-in">
+                    <p class="text-lightText text-lg">
+                        **Career Bridge Solutions is not an RTO or a broker.** We act as your independent support
+                        system, helping you avoid scams, secure valid documentation, and plan your career with
+                        confidence.
+                    </p>
+                </div>
+
+                <!-- Contact Info Section -->
+                <div class="max-w-3xl mx-auto mt-16 p-8 rounded-lg shadow-lg bg-white text-darkText fade-in">
+                    <h3 class="text-2xl font-bold text-center mb-6">Our Contact Details</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center md:text-left">
+                        <div>
+                            <p class="text-lg font-semibold mb-2">Email Us:</p>
+                            <p class="text-lightText">
+                                <a href="mailto:info@careerbridgesolutions.com.au"
+                                    class="text-primary hover:underline">info@careerbridgesolutions.com.au</a>
+                            </p>
+                        </div>
+                        <div>
+                            <p class="text-lg font-semibold mb-2">Call Us:</p>
+                            <p class="text-lightText flex items-center justify-center md:justify-start">
+                                <a href="tel:+61470578967" class="text-primary hover:underline">+61 470 578 967</a>
+                                <a href="https://wa.me/61470578967" target="_blank"
+                                    class="ml-2 text-green-500 hover:text-green-400 transition duration-300">
+                                    <i class="fab fa-whatsapp text-2xl"></i>
+                                </a>
+                            </p>
+                        </div>
+                        <div class="md:col-span-2">
+                            <p class="text-lg font-semibold mb-2">Our Address:</p>
+                            <p class="text-lightText">
+                                328 Swanston St, Melbourne VIC 3000, Australia
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section (Copied from index.html for consistency, adjusted links) -->
+    <footer class="bg-darkText py-12 text-gray-300">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-white text-xl font-bold mb-4">About Career Bridge Solutions</h3>
+                <p class="text-gray-400">
+                    Your independent support system for Recognition of Prior Learning (RPL) in Australia. We provide
+                    genuine guidance and real protection for your career.
+                </p>
+                <div class="flex space-x-4 mt-6">
+                    <!-- Placeholder social media icons/links. Replace # with actual links. -->
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <span class="text-2xl">📘</span>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <span class="text-2xl">🔗</span>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-white text-xl font-bold mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="index.html#banner-section"
+                            class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                    <li><a href="index.html#what-we-do"
+                            class="text-gray-400 hover:text-white transition duration-300">What We Do</a></li>
+                    <li><a href="index.html#eligibility-quiz"
+                            class="text-gray-400 hover:text-white transition duration-300">Check Eligibility</a></li>
+                    <li><a href="index.html#why-choose-us"
+                            class="text-gray-400 hover:text-white transition duration-300">Why Choose Us</a></li>
+                    <li><a href="article.html" class="text-gray-400 hover:text-white transition duration-300">Blog</a>
+                    </li>
+                    <li><a href="#top" class="text-gray-400 hover:text-white transition duration-300">Contact Us</a>
+                    </li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-white text-xl font-bold mb-4">Contact Info</h3>
+                <p class="text-gray-400 mb-2">
+                    Email: <a href="mailto:info@careerbridgesolutions.com.au"
+                        class="hover:text-white">info@careerbridgesolutions.com.au</a>
+                </p>
+                <p class="text-gray-400 mb-2 flex items-center">
+                    Phone: <a href="tel:+61470578967" class="hover:text-white">+61 470 578 967</a>
+                    <a href="https://wa.me/61470578967" target="_blank"
+                        class="ml-2 text-green-500 hover:text-green-400 transition duration-300">
+                        <i class="fab fa-whatsapp text-2xl"></i>
+                    </a>
+                </p>
+                <p class="text-gray-400 mt-4">
+                    Address: 328 Swanston St, Melbourne VIC 3000, Australia
+                </p>
+            </div>
+        </div>
+        <div class="text-center border-t border-gray-700 pt-8 mt-8">
+            <p class="text-gray-500 text-sm">&copy; 2025 Career Bridge Solutions. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top"
+        class="fixed bottom-6 right-6 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-primary-dark transition-all duration-300 transform hover:scale-110 z-50 opacity-0 invisible">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+    </button>
+
+    <!-- Custom JavaScript (same script.js to share functionality) -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
