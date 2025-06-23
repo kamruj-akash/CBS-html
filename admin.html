@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Form Responses</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // আপনার সাইটের সাথে সামঞ্জস্যপূর্ণ থিম
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1A4F8B',
+                        secondary: '#2672B1',
+                        darkText: '#333333',
+                        lightText: '#666666',
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body class="bg-gray-100 font-sans">
+
+    <header class="bg-primary shadow-md">
+        <div class="container mx-auto px-6 py-4">
+            <h1 class="text-3xl font-bold text-white">Admin Panel</h1>
+            <p class="text-gray-200">View form submissions stored in Local Storage.</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-8">
+
+        <section class="mb-12">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-2xl font-semibold text-darkText">Contact Form Submissions</h2>
+                <button id="clear-contact"
+                    class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 transition duration-300">
+                    Clear Contact Data
+                </button>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg overflow-x-auto">
+                <table class="min-w-full divide-y divide-gray-200" id="contact-table">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                Submitted At</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                Name</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                Email</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                Phone</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                Message</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                    </tbody>
+                </table>
+                <p id="no-contact-data" class="text-center text-gray-500 py-4 hidden">No contact submissions yet.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-2xl font-semibold text-darkText">Eligibility Quiz Submissions</h2>
+                <button id="clear-quiz"
+                    class="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 transition duration-300">
+                    Clear Quiz Data
+                </button>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg overflow-x-auto">
+                <table class="min-w-full divide-y divide-gray-200" id="quiz-table">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                Submitted At</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                Experience</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                Qualification Sought</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                Has Qualification?</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                    </tbody>
+                </table>
+                <p id="no-quiz-data" class="text-center text-gray-500 py-4 hidden">No quiz submissions yet.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="js/admin.js"></script>
+</body>
+
+</html>

@@ -37,7 +37,6 @@ $(document).ready(function () {
         entries.forEach(entry => {
             if (entry.isIntersecting) { // If the element is currently in view
                 entry.target.classList.add('appear'); // Add 'appear' class to trigger animation
-                // observer.unobserve(entry.target); // Optional: Stop observing once animated if you only want it to animate once
             }
         });
     }, {
@@ -110,32 +109,32 @@ $(document).ready(function () {
         $svg.toggleClass('rotate-180');
 
         // Optional: Close other open FAQs when one is opened
-        $('.faq-item').not($parent).find('.faq-answer').slideUp(300).removeClass('open');
+        $('.faq-item').not($parent).find('.faq-answer').slideUp(300);
         $('.faq-item').not($parent).find('.faq-question svg').removeClass('rotate-180');
     });
 
 
-    // Contact Form Submission and Validation
+    // Contact Form Submission and Validation (Updated with Local Storage)
     $('#contact-form').on('submit', function (e) {
         e.preventDefault(); // Prevent default form submission
 
         let isValid = true;
 
         // Clear previous error messages and styling
-        $('.text-red-500').addClass('hidden'); // Hide all error messages
-        $('input, textarea').removeClass('border-red-500').addClass('border-gray-300'); // Reset borders
+        $('.text-red-500').addClass('hidden');
+        $('input, textarea').removeClass('border-red-500').addClass('border-gray-300');
 
         // Validate Name
         const name = $('#name').val().trim();
         if (name === '') {
-            $('#name-error').removeClass('hidden'); // Show error message
-            $('#name').removeClass('border-gray-300').addClass('border-red-500'); // Add error border
+            $('#name-error').removeClass('hidden');
+            $('#name').removeClass('border-gray-300').addClass('border-red-500');
             isValid = false;
         }
 
         // Validate Email
         const email = $('#email').val().trim();
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Basic email regex
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (email === '' || !emailRegex.test(email)) {
             $('#email-error').removeClass('hidden').text('Please enter a valid email address.');
             $('#email').removeClass('border-gray-300').addClass('border-red-500');
@@ -144,20 +143,31 @@ $(document).ready(function () {
 
         // Validate Message
         const message = $('#message').val().trim();
-        if (message.length < 10) { // Example: require at least 10 characters
+        if (message.length < 10) {
             $('#message-error').removeClass('hidden').text('Message must be at least 10 characters long.');
             $('#message').removeClass('border-gray-300').addClass('border-red-500');
             isValid = false;
         }
 
         if (isValid) {
-            // If all validations pass, you would typically send this data to a backend server using AJAX here.
-            // For FormSubmit.co, the form's 'action' attribute handles the submission.
-            // Example: $.post('your-backend-api-endpoint', $(this).serialize(), function(response){ ... });
+            // Save submission to Local Storage
+            const submission = {
+                name: name,
+                email: email,
+                phone: $('#phone').val().trim(),
+                message: message,
+                submittedAt: new Date().toLocaleString('en-AU') // Using Australian locale for timestamp
+            };
 
-            // Show a custom success message (instead of alert)
-            // For simplicity, we'll use a temporary message in a div or modal.
-            // A simple approach:
+            // Get existing submissions or create a new array
+            let submissions = JSON.parse(localStorage.getItem('contactSubmissions')) || [];
+            // Add the new submission
+            submissions.push(submission);
+            // Save the updated array back to Local Storage
+            localStorage.setItem('contactSubmissions', JSON.stringify(submissions));
+
+
+            // Show a custom success message
             const successMessage = $('<div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[999]">' +
                 '<div class="bg-white p-8 rounded-lg shadow-xl text-center max-w-sm mx-auto">' +
                 '<p class="text-xl font-semibold text-green-600 mb-4">Success!</p>' +
@@ -175,7 +185,7 @@ $(document).ready(function () {
     });
 
 
-    // Eligibility Quiz Logic
+    // Eligibility Quiz Logic (Updated with Local Storage)
     $('#eligibility-form').on('submit', function (e) {
         e.preventDefault(); // Prevent default form submission
 
@@ -188,11 +198,9 @@ $(document).ready(function () {
         // Clear previous results and error messages
         resultsDiv.addClass('hidden').empty(); // Hide and clear content of results div
         $('.text-red-500', this).addClass('hidden'); // Hide all errors within the form
-        $('select, input[type="text"], input[type="radio"]', this).removeClass('border-red-500'); // Remove error borders
+        $('select, input[type="text"], input[type="radio"]', this).removeClass('border-red-500');
 
-        let isValid = true; // Flag for form validation
-        let message = ""; // Message to display to the user
-        let canProceed = false; // Flag to indicate if user likely qualifies
+        let isValid = true;
 
         // Perform validation for each field
         if (years === "") {
@@ -207,39 +215,45 @@ $(document).ready(function () {
         }
         if (status === undefined) {
             $('#current-status-error').removeClass('hidden');
-            // No direct border for radio, but can highlight surrounding div if needed
             isValid = false;
         }
 
         if (!isValid) {
-            // If validation fails, just return; errors are already shown
             resultsDiv.removeClass('hidden').html('<p class="text-red-600">Please answer all highlighted questions.</p>');
             return;
         }
 
-        // Determine eligibility based on criteria
-        // Modified logic to ensure only positive or moderately positive messages are displayed
+        // Save submission to Local Storage
+        const submission = {
+            years: years,
+            qualification: qualification,
+            status: status,
+            submittedAt: new Date().toLocaleString('en-AU')
+        };
+
+        let submissions = JSON.parse(localStorage.getItem('quizSubmissions')) || [];
+        submissions.push(submission);
+        localStorage.setItem('quizSubmissions', JSON.stringify(submissions));
+
+        // Determine eligibility and display the message
+        let message = "";
         if (years === "5+" && status === "no" && qualification.length > 5) {
             message = "Great news! Based on your input, you likely qualify for RPL. We recommend a free consultation to confirm!";
-            resultsDiv.addClass('text-green-600'); // Green for positive result
+            resultsDiv.addClass('text-green-600').removeClass('text-orange-600');
         } else {
-            // For all other valid inputs, default to "You might be eligible!"
             message = "You might be eligible! Your experience is a good starting point. Let's discuss further in a consultation.";
-            resultsDiv.addClass('text-orange-600'); // Orange for conditional result
+            resultsDiv.addClass('text-orange-600').removeClass('text-green-600');
         }
-        canProceed = true; // Always true if isValid is true, as per your request
 
         // Display the message
         resultsDiv.html('<p>' + message + '</p>').removeClass('hidden');
 
-        // If eligible, provide a strong call to action
-        if (canProceed) {
-            resultsDiv.append('<div class="mt-4">' +
-                '<a href="contact.html" class="btn-primary bg-primary text-white px-6 py-2 rounded-full font-semibold shadow-lg hover:shadow-xl">' +
-                'Get Free Consultation' +
-                '</a>' +
-                '</div>');
-        }
+        // Provide a strong call to action
+        resultsDiv.append('<div class="mt-4">' +
+            '<a href="contact.html" class="btn-primary bg-primary text-white px-6 py-2 rounded-full font-semibold shadow-lg hover:shadow-xl">' +
+            'Get Free Consultation' +
+            '</a>' +
+            '</div>');
     });
 
 }); // End of document.ready
