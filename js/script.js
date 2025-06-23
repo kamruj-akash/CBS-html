@@ -81,20 +81,22 @@ $(document).ready(function () {
     }
 
     // Initial display of the first testimonial
-    showTestimonial(currentTestimonial);
-
-    // Auto-advance testimonials every 7 seconds
-    setInterval(() => {
-        currentTestimonial = (currentTestimonial + 1) % totalTestimonials; // Cycle through testimonials
+    if (testimonials.length > 0) {
         showTestimonial(currentTestimonial);
-    }, 7000); // Change testimonial every 7 seconds
 
-    // Navigation dots functionality: Change testimonial when a dot is clicked.
-    testimonialDots.on('click', function () {
-        const index = $(this).index(); // Get the index of the clicked dot
-        currentTestimonial = index; // Set current testimonial to that index
-        showTestimonial(currentTestimonial);
-    });
+        // Auto-advance testimonials every 7 seconds
+        setInterval(() => {
+            currentTestimonial = (currentTestimonial + 1) % totalTestimonials; // Cycle through testimonials
+            showTestimonial(currentTestimonial);
+        }, 7000); // Change testimonial every 7 seconds
+
+        // Navigation dots functionality: Change testimonial when a dot is clicked.
+        testimonialDots.on('click', function () {
+            const index = $(this).index(); // Get the index of the clicked dot
+            currentTestimonial = index; // Set current testimonial to that index
+            showTestimonial(currentTestimonial);
+        });
+    }
 
     // FAQ Accordion: Toggles the visibility of FAQ answers and rotates an icon.
     $('.faq-question').on('click', function () {
@@ -114,7 +116,7 @@ $(document).ready(function () {
     });
 
 
-    // Contact Form Submission and Validation (Updated with Local Storage)
+    // Contact Form Submission and Validation (Updated with Local Storage and Unique ID)
     $('#contact-form').on('submit', function (e) {
         e.preventDefault(); // Prevent default form submission
 
@@ -152,11 +154,12 @@ $(document).ready(function () {
         if (isValid) {
             // Save submission to Local Storage
             const submission = {
+                id: Date.now(), // Unique ID for individual deletion
                 name: name,
                 email: email,
                 phone: $('#phone').val().trim(),
                 message: message,
-                submittedAt: new Date().toLocaleString('en-AU') // Using Australian locale for timestamp
+                submittedAt: new Date().toLocaleString('en-AU')
             };
 
             // Get existing submissions or create a new array
@@ -185,7 +188,7 @@ $(document).ready(function () {
     });
 
 
-    // Eligibility Quiz Logic (Updated with Local Storage)
+    // Eligibility Quiz Logic (Updated with Local Storage and Unique ID)
     $('#eligibility-form').on('submit', function (e) {
         e.preventDefault(); // Prevent default form submission
 
@@ -225,6 +228,7 @@ $(document).ready(function () {
 
         // Save submission to Local Storage
         const submission = {
+            id: Date.now(), // Unique ID for individual deletion
             years: years,
             qualification: qualification,
             status: status,
